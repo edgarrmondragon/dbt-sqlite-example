@@ -1,8 +1,8 @@
 version: 2
 
 sources:
-  - name: etl
-    schema: main
-    description: Test
+  - name: retail
+    schema: dataset
+    description: Retail Store Sales Transactions (Scanner Data)
     tables:
       - name: scanner_data
