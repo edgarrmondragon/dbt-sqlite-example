@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: orders
+    description: Fact table for orders including customer and cohort dimensions.
+  - name: cohorts
+    description: Cohort revenue analysis.

@@ -2,7 +2,13 @@ version: 2
 
 sources:
   - name: retail
+    tags: [kaggle]
+    loader: SQLite CLI
     schema: dataset
     description: Retail Store Sales Transactions (Scanner Data)
     tables:
       - name: scanner_data
+        description: >
+          Detailed data on sales of consumer goods obtained by ‘scanning’ the
+          bar codes for individual products at electronic points of sale in a
+          retail store.
