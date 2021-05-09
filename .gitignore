@@ -1,0 +1,11 @@
+
+target/
+dbt_modules/
+logs/
+
+venv/
+
+*.zip
+*.stamp
+*.db
+*.csv

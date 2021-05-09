@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "dbt-sqlite-test"
+version = "0.1.0"
+description = "Testing dbt with SQLite"
+authors = ["Edgar Ramírez Mondragón <edgarrm358@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+dbt-sqlite = "^0.1.1"
+kaggle = "^1.5.12"
+dbt-core = "^0.19.1"
+
+[tool.poetry.dev-dependencies]
+sqlfluff = "^0.5.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

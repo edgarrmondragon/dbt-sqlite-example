@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: etl
+    schema: main
+    description: Test
+    tables:
+      - name: scanner_data
