@@ -6,9 +6,9 @@ authors = ["Edgar Ramírez Mondragón <edgarrm358@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-dbt-sqlite = "^0.1.1"
 kaggle = "^1.5.12"
 dbt-core = "^0.19.2"
+dbt-sqlite = {git = "https://github.com/edgarrmondragon/dbt-sqlite.git", rev = "object-schema-and-paths"}
 
 [tool.poetry.dev-dependencies]
 sqlfluff = "^0.6.0"
