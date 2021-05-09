@@ -1,5 +1,7 @@
 # dbt and SQLite
 
+[![Lint dbt models](https://github.com/edgarrmondragon/dbt-sqlite-example/actions/workflows/lint-models.yml/badge.svg?event=push)](https://github.com/edgarrmondragon/dbt-sqlite-example/actions/workflows/lint-models.yml)
+
 Example [dbt] project with SQLite.
 
 ## Dependencies

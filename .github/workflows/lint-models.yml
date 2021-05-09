@@ -1,0 +1,33 @@
+name: Lint dbt models
+
+on: push
+
+jobs:
+  lint_dbt:
+    name: Lint SQL models using SQLFluff
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        python-version: ['3.7', '3.8']
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+          architecture: x64
+
+      - name: Install Dependencies
+        run: |
+          pip install poetry==1.1.5
+          poetry install
+
+      - name: Lint models
+        run: |
+          mkdir ~/.dbt/
+          cp profiles.yml ~/.dbt/profiles.yml
+          make lint
