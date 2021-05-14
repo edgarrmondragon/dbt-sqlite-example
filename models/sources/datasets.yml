@@ -5,10 +5,9 @@ sources:
     tags: [kaggle]
     loader: SQLite CLI
     schema: dataset
-    description: Retail Store Sales Transactions (Scanner Data)
+    description: '{{ doc("scanner_data") }}'
     tables:
       - name: scanner_data
         description: >
-          Detailed data on sales of consumer goods obtained by ‘scanning’ the
-          bar codes for individual products at electronic points of sale in a
-          retail store.
+          64.682 transactions of 5.242 SKU's sold to 22.625 customers during
+          one year.

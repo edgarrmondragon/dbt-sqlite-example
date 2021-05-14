@@ -27,7 +27,7 @@ target/compiled/$(PROJECT)/$(COMPILE_STAMP): dbs/dataset.db
 	$(POETRY) run dbt compile
 	touch target/compiled/$(PROJECT)/$(COMPILE_STAMP)
 
-docs: target/index.html
+docs: dbs/dataset.db install target/index.html
 target/index.html: dbs/dataset.db
 	$(POETRY) run dbt docs generate
 
