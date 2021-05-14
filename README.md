@@ -6,6 +6,7 @@ Example [dbt] project with SQLite.
 
 ## Dependencies
 
+- [Kaggle CLI]
 - [poetry]
 - [sqlite3]
 
@@ -30,6 +31,8 @@ dbt_sqlite:
       schema_directory: "{{ env_var('PWD') }}/dbs"
 ```
 
+### [Setup your Kaggle credentials][kaggle-api]
+
 ### Run models
 
 ```shell
@@ -48,7 +51,9 @@ make lineage
 make lint
 ```
 
+[Kaggle CLI]: https://github.com/Kaggle/kaggle-api
 [poetry]: https://python-poetry.org/
 [sqlite3]: https://sqlite.org/download.html
 [dbt]: https://getdbt.com
 [SQLFluff]: https://docs.sqlfluff.com
+[kaggle-api]: https://github.com/Kaggle/kaggle-api#api-credentials
