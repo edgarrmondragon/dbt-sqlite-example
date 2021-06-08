@@ -11,7 +11,15 @@ dbt-core = "^0.19.2"
 dbt-sqlite = {git = "https://github.com/edgarrmondragon/dbt-sqlite.git", rev = "object-schema-and-paths"}
 
 [tool.poetry.dev-dependencies]
-sqlfluff = "^0.6.0"
+sqlfluff = {git = "https://github.com/sqlfluff/sqlfluff.git", rev = "master"}
+
+[tool.sqlfluff.core]
+templater = "dbt"
+
+[tool.sqlfluff.rules]
+tab_space_size = 2
+comma_style = "leading"
+max_line_length = 100
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

@@ -678,6 +678,7 @@ description = "Modular SQL Linting for Humans"
 category = "dev"
 optional = false
 python-versions = ">=3.6"
+develop = false
 
 [package.dependencies]
 appdirs = "*"
@@ -696,6 +697,12 @@ typing-extensions = "*"
 
 [package.extras]
 dbt = ["dbt (>=0.17)"]
+
+[package.source]
+type = "git"
+url = "https://github.com/sqlfluff/sqlfluff.git"
+reference = "master"
+resolved_reference = "b3cf60de42b5460faa913240ddc0ff400a5ca7d9"
 
 [[package]]
 name = "sqlparse"
@@ -793,7 +800,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "65e9b6153263b24e0fc0b9e3214224ef59c790ff040aa9e235755c1864de8b5b"
+content-hash = "90fb301b092799b827642a526a9388990c77e7bed4f4f4f35d58025f31988125"
 
 [metadata.files]
 agate = [
@@ -1311,10 +1318,7 @@ six = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
     {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
 ]
-sqlfluff = [
-    {file = "sqlfluff-0.6.0-py3-none-any.whl", hash = "sha256:7725542b9a3d3a50ff624595c81e65e50fc772e4f6bfffd3118e542e6ff87e00"},
-    {file = "sqlfluff-0.6.0.tar.gz", hash = "sha256:2fcd0c29129c4ac4866be2035cbd096787c1ae7e5a33b11050b31135522cb425"},
-]
+sqlfluff = []
 sqlparse = [
     {file = "sqlparse-0.3.1-py2.py3-none-any.whl", hash = "sha256:022fb9c87b524d1f7862b3037e541f68597a730a8843245c349fc93e1643dc4e"},
     {file = "sqlparse-0.3.1.tar.gz", hash = "sha256:e162203737712307dfe78860cc56c8da8a852ab2ee33750e33aeadf38d12c548"},
