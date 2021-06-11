@@ -15,6 +15,7 @@ sqlfluff = {git = "https://github.com/sqlfluff/sqlfluff.git", rev = "master"}
 
 [tool.sqlfluff.core]
 templater = "dbt"
+exclude_rules = "L005"
 
 [tool.sqlfluff.rules]
 tab_space_size = 2
