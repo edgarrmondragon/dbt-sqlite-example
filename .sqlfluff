@@ -1,5 +1,6 @@
 [sqlfluff]
 templater = dbt
+exclude_rules = L005
 
 [sqlfluff:rules]
 tab_space_size = 2
