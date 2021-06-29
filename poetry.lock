@@ -121,7 +121,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 
 [[package]]
 name = "dbt-core"
-version = "0.19.1"
+version = "0.19.2"
 description = "dbt (data build tool) is a command line tool that helps analysts and engineers transform data in their warehouse more effectively"
 category = "main"
 optional = false
@@ -713,7 +713,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "4aab7179dc13390a78a32f3366be346accaac571c548b9f2364d0f39ac068a87"
+content-hash = "b0cca057b3664354783a0aeca3b603aca2c09664532669549f97a5e402b4ac0c"
 
 [metadata.files]
 agate = [
@@ -812,8 +812,8 @@ configparser = [
     {file = "configparser-5.0.2.tar.gz", hash = "sha256:85d5de102cfe6d14a5172676f09d19c465ce63d6019cf0a4ef13385fc535e828"},
 ]
 dbt-core = [
-    {file = "dbt-core-0.19.1.tar.gz", hash = "sha256:c379a576928e938f4527a2e57f5f75fc643d65fa7fbde1c38dbbc7122915d34a"},
-    {file = "dbt_core-0.19.1-py3-none-any.whl", hash = "sha256:3b25eab3b938b766ff3a5c2b6c6bdce50a7399cdfc536326ba1629dc8c89750c"},
+    {file = "dbt-core-0.19.2.tar.gz", hash = "sha256:8adc155a41a63e935d0d347714d7207d422d03e623bb0f52f4335b385a4480d3"},
+    {file = "dbt_core-0.19.2-py3-none-any.whl", hash = "sha256:449eae5b16db990cac8e73d73ffcf2dea926ceabd01a347526fab0177b72ac7e"},
 ]
 dbt-sqlite = [
     {file = "dbt-sqlite-0.1.1.tar.gz", hash = "sha256:a777bf53e8738f83c665ef062da60e2dd99d62b46742edbf4d2cd294a51978a4"},
