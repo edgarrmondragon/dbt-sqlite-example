@@ -162,21 +162,14 @@ werkzeug = ">=0.15,<2.0"
 
 [[package]]
 name = "dbt-sqlite"
-version = "0.1.1"
-description = ""
+version = "0.1.2"
+description = "A SQLite adapter plugin for dbt (data build tool)"
 category = "main"
 optional = false
 python-versions = "*"
-develop = false
 
 [package.dependencies]
 dbt-core = ">=0.19.0,<0.20.0"
-
-[package.source]
-type = "git"
-url = "https://github.com/edgarrmondragon/dbt-sqlite.git"
-reference = "object-schema-and-paths"
-resolved_reference = "1e59569aa5359a666bcf608c8a7d109249445fab"
 
 [[package]]
 name = "diff-cover"
@@ -800,7 +793,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "90fb301b092799b827642a526a9388990c77e7bed4f4f4f35d58025f31988125"
+content-hash = "9265b56e0b7026b88d6e98537716e2dcf9d0c2c3ae606b6d883b38262b308db3"
 
 [metadata.files]
 agate = [
@@ -897,7 +890,10 @@ dbt-core = [
     {file = "dbt-core-0.19.2.tar.gz", hash = "sha256:8adc155a41a63e935d0d347714d7207d422d03e623bb0f52f4335b385a4480d3"},
     {file = "dbt_core-0.19.2-py3-none-any.whl", hash = "sha256:449eae5b16db990cac8e73d73ffcf2dea926ceabd01a347526fab0177b72ac7e"},
 ]
-dbt-sqlite = []
+dbt-sqlite = [
+    {file = "dbt-sqlite-0.1.2.tar.gz", hash = "sha256:e9a04edfb5ed14aeb99862d28c12634e64b5ad13ef753d4a2fc614facf6802e2"},
+    {file = "dbt_sqlite-0.1.2-py3-none-any.whl", hash = "sha256:6309ec40b56c7eee04620b7167ce0b84d44de36fde777937b1a0e4c25b5e7586"},
+]
 diff-cover = [
     {file = "diff_cover-6.1.0-py3-none-any.whl", hash = "sha256:814db24aaf6770ed0aed19f3cdc2bf590bf2896a58ec5276ae0edac459d76a17"},
     {file = "diff_cover-6.1.0.tar.gz", hash = "sha256:b55f314dfc8d070db904fe7e8feaedb72b4856b7996d1aa7ab38154820e44a8f"},
