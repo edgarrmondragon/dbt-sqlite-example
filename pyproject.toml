@@ -6,12 +6,21 @@ authors = ["Edgar Ramírez Mondragón <edgarrm358@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-dbt-sqlite = "^0.1.1"
 kaggle = "^1.5.12"
 dbt-core = "^0.19.2"
+dbt-sqlite = "^0.1.2"
 
 [tool.poetry.dev-dependencies]
-sqlfluff = "^0.6.0"
+sqlfluff = {git = "https://github.com/sqlfluff/sqlfluff.git", rev = "master"}
+
+[tool.sqlfluff.core]
+templater = "dbt"
+exclude_rules = "L005"
+
+[tool.sqlfluff.rules]
+tab_space_size = 2
+comma_style = "leading"
+max_line_length = 100
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
