@@ -173,18 +173,19 @@ dbt-core = ">=0.19.0,<0.20.0"
 
 [[package]]
 name = "diff-cover"
-version = "6.1.0"
-description = "Automatically find diff lines that need test coverage."
+version = "6.2.2"
+description = "Run coverage and linting reports on diffs"
 category = "dev"
 optional = false
-python-versions = ">= 3.6"
+python-versions = ">=3.6.2,<4.0.0"
 
 [package.dependencies]
 chardet = ">=3.0.0"
 Jinja2 = ">=2.7.1"
-jinja2-pluralize = "*"
-pluggy = "*"
-pygments = "*"
+jinja2_pluralize = ">=0.3.0,<0.4.0"
+pluggy = ">=0.13.1,<0.14.0"
+Pygments = ">=2.9.0,<3.0.0"
+tomli = ">=1.2.1,<2.0.0"
 
 [[package]]
 name = "hologram"
@@ -492,11 +493,11 @@ python-versions = "*"
 
 [[package]]
 name = "pathspec"
-version = "0.8.1"
+version = "0.9.0"
 description = "Utility library for gitignore style pattern matching of file paths."
 category = "dev"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 
 [[package]]
 name = "pillow"
@@ -666,12 +667,11 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "sqlfluff"
-version = "0.6.0"
+version = "0.6.2"
 description = "Modular SQL Linting for Humans"
 category = "dev"
 optional = false
 python-versions = ">=3.6"
-develop = false
 
 [package.dependencies]
 appdirs = "*"
@@ -690,12 +690,6 @@ typing-extensions = "*"
 
 [package.extras]
 dbt = ["dbt (>=0.17)"]
-
-[package.source]
-type = "git"
-url = "https://github.com/sqlfluff/sqlfluff.git"
-reference = "master"
-resolved_reference = "b3cf60de42b5460faa913240ddc0ff400a5ca7d9"
 
 [[package]]
 name = "sqlparse"
@@ -728,6 +722,14 @@ description = "Python Library for Tom's Obvious, Minimal Language"
 category = "dev"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
+
+[[package]]
+name = "tomli"
+version = "1.2.1"
+description = "A lil' TOML parser"
+category = "dev"
+optional = false
+python-versions = ">=3.6"
 
 [[package]]
 name = "tqdm"
@@ -793,7 +795,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "9265b56e0b7026b88d6e98537716e2dcf9d0c2c3ae606b6d883b38262b308db3"
+content-hash = "ffae0455ad6ace91d7efaffc9a7195aae9687073c42acfa70b850ccdd1c43dd3"
 
 [metadata.files]
 agate = [
@@ -895,8 +897,8 @@ dbt-sqlite = [
     {file = "dbt_sqlite-0.1.2-py3-none-any.whl", hash = "sha256:6309ec40b56c7eee04620b7167ce0b84d44de36fde777937b1a0e4c25b5e7586"},
 ]
 diff-cover = [
-    {file = "diff_cover-6.1.0-py3-none-any.whl", hash = "sha256:814db24aaf6770ed0aed19f3cdc2bf590bf2896a58ec5276ae0edac459d76a17"},
-    {file = "diff_cover-6.1.0.tar.gz", hash = "sha256:b55f314dfc8d070db904fe7e8feaedb72b4856b7996d1aa7ab38154820e44a8f"},
+    {file = "diff_cover-6.2.2-py3-none-any.whl", hash = "sha256:e4627da677421a6f9014d7c0e52647fa8bc6beb326566fe847f77038a8dbb919"},
+    {file = "diff_cover-6.2.2.tar.gz", hash = "sha256:f439baa4e48f974ca1887f4560878f3f71ea53590cce1431fa95f31f99c55df0"},
 ]
 hologram = [
     {file = "hologram-0.0.13-py3-none-any.whl", hash = "sha256:7f2bc71d02f52aec2c060c64b429dbfee05cc92df0eb0a6f50cd153e073e8d31"},
@@ -1151,8 +1153,8 @@ parsedatetime = [
     {file = "parsedatetime-2.6.tar.gz", hash = "sha256:4cb368fbb18a0b7231f4d76119165451c8d2e35951455dfee97c62a87b04d455"},
 ]
 pathspec = [
-    {file = "pathspec-0.8.1-py2.py3-none-any.whl", hash = "sha256:aa0cb481c4041bf52ffa7b0d8fa6cd3e88a2ca4879c533c9153882ee2556790d"},
-    {file = "pathspec-0.8.1.tar.gz", hash = "sha256:86379d6b86d75816baba717e64b1a3a3469deb93bb76d613c9ce79edc5cb68fd"},
+    {file = "pathspec-0.9.0-py2.py3-none-any.whl", hash = "sha256:7d15c4ddb0b5c802d161efc417ec1a2558ea2653c2e8ad9c19098201dc1c993a"},
+    {file = "pathspec-0.9.0.tar.gz", hash = "sha256:e564499435a2673d586f6b2130bb5b95f04a3ba06f81b8f895b651a3c76aabb1"},
 ]
 pillow = [
     {file = "Pillow-8.3.1-cp36-cp36m-macosx_10_10_x86_64.whl", hash = "sha256:196560dba4da7a72c5e7085fccc5938ab4075fd37fe8b5468869724109812edd"},
@@ -1314,7 +1316,10 @@ six = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
     {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
 ]
-sqlfluff = []
+sqlfluff = [
+    {file = "sqlfluff-0.6.2-py3-none-any.whl", hash = "sha256:84eaa5257448eba36cbab06616de7a8e84c883ba03bfc984ea048e374299f64a"},
+    {file = "sqlfluff-0.6.2.tar.gz", hash = "sha256:3070181751a093d83fdb802b65d8163d765e5d5b6c01f2440d702899f7c51734"},
+]
 sqlparse = [
     {file = "sqlparse-0.3.1-py2.py3-none-any.whl", hash = "sha256:022fb9c87b524d1f7862b3037e541f68597a730a8843245c349fc93e1643dc4e"},
     {file = "sqlparse-0.3.1.tar.gz", hash = "sha256:e162203737712307dfe78860cc56c8da8a852ab2ee33750e33aeadf38d12c548"},
@@ -1330,6 +1335,10 @@ text-unidecode = [
 toml = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
     {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
+]
+tomli = [
+    {file = "tomli-1.2.1-py3-none-any.whl", hash = "sha256:8dd0e9524d6f386271a36b41dbf6c57d8e32fd96fd22b6584679dc569d20899f"},
+    {file = "tomli-1.2.1.tar.gz", hash = "sha256:a5b75cb6f3968abb47af1b40c1819dc519ea82bcc065776a866e8d74c5ca9442"},
 ]
 tqdm = [
     {file = "tqdm-4.61.2-py2.py3-none-any.whl", hash = "sha256:5aa445ea0ad8b16d82b15ab342de6b195a722d75fc1ef9934a46bba6feafbc64"},

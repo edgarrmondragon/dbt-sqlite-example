@@ -11,7 +11,7 @@ dbt-core = "^0.19.2"
 dbt-sqlite = "^0.1.2"
 
 [tool.poetry.dev-dependencies]
-sqlfluff = {git = "https://github.com/sqlfluff/sqlfluff.git", rev = "master"}
+sqlfluff = "^0.6.2"
 
 [tool.sqlfluff.core]
 templater = "dbt"
