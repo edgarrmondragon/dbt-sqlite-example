@@ -4,7 +4,7 @@ customer_cohorts as (
 
   select
     customer_id
-    , date(min(date), 'start of month') as cohort_month
+    , date({{ parse_ddmmyyyy_date("date") }}, 'start of month') as cohort_month
   from {{ source('retail', 'scanner_data') }}
   group by 1
 
@@ -14,7 +14,7 @@ customer_cohorts as (
 
   select
     transaction_id
-    , min(date) as order_date
+    , min({{ parse_ddmmyyyy_date("date") }}) as order_date
     , min(customer_id) as customer_id
     , count(sku) as items
     , count(distinct sku) as unique_items
