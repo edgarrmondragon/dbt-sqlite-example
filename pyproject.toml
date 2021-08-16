@@ -11,7 +11,7 @@ dbt-core = "^0.20.0"
 dbt-sqlite = "^0.2.0"
 
 [tool.poetry.dev-dependencies]
-sqlfluff = "^0.6.2"
+sqlfluff = "^0.6.3"
 
 [tool.sqlfluff.core]
 templater = "dbt"
