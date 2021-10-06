@@ -27,7 +27,6 @@ jobs:
           poetry install
 
       - name: Lint models
-        run: |
-          mkdir ~/.dbt/
-          cp profiles.yml ~/.dbt/profiles.yml
-          make lint
+        env:
+          DBT_PROFILES_DIR: "./"
+        run: make lint
