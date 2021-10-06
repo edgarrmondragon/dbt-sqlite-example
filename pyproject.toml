@@ -8,7 +8,7 @@ authors = ["Edgar Ramírez Mondragón <edgarrm358@gmail.com>"]
 python = "^3.8"
 kaggle = "^1.5.12"
 dbt-core = "^0.20.1"
-dbt-sqlite = "^0.2.0"
+dbt-sqlite = "^0.2.1"
 
 [tool.poetry.dev-dependencies]
 sqlfluff = {extras = ["dbt"], version = "^0.6.8"}
