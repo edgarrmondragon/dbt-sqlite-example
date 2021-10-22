@@ -224,29 +224,29 @@ test = ["pytest (>=6.0)", "pytest-cov", "pytest-subtests", "pytest-xdist", "pret
 
 [[package]]
 name = "dbt"
-version = "0.20.1"
+version = "0.20.2"
 description = "With dbt, data analysts and engineers can build analytics the way engineers build applications."
 category = "dev"
 optional = false
 python-versions = ">=3.6.2"
 
 [package.dependencies]
-dbt-bigquery = "0.20.1"
-dbt-core = "0.20.1"
-dbt-postgres = "0.20.1"
-dbt-redshift = "0.20.1"
-dbt-snowflake = "0.20.1"
+dbt-bigquery = "0.20.2"
+dbt-core = "0.20.2"
+dbt-postgres = "0.20.2"
+dbt-redshift = "0.20.2"
+dbt-snowflake = "0.20.2"
 
 [[package]]
 name = "dbt-bigquery"
-version = "0.20.1"
+version = "0.20.2"
 description = "The bigquery adapter plugin for dbt (data build tool)"
 category = "dev"
 optional = false
 python-versions = ">=3.6.2"
 
 [package.dependencies]
-dbt-core = "0.20.1"
+dbt-core = "0.20.2"
 google-api-core = ">=1.16.0,<2"
 google-cloud-bigquery = ">=1.25.0,<3"
 google-cloud-core = ">=1.3.0,<2"
@@ -256,7 +256,7 @@ six = ">=1.14.0"
 
 [[package]]
 name = "dbt-core"
-version = "0.20.1"
+version = "0.20.2"
 description = "dbt (data build tool) is a command line tool that helps analysts and engineers transform data in their warehouse more effectively"
 category = "main"
 optional = false
@@ -293,19 +293,19 @@ python-versions = "*"
 
 [[package]]
 name = "dbt-postgres"
-version = "0.20.1"
+version = "0.20.2"
 description = "The postgres adpter plugin for dbt (data build tool)"
 category = "dev"
 optional = false
 python-versions = ">=3.6.2"
 
 [package.dependencies]
-dbt-core = "0.20.1"
+dbt-core = "0.20.2"
 psycopg2-binary = ">=2.8,<3.0"
 
 [[package]]
 name = "dbt-redshift"
-version = "0.20.1"
+version = "0.20.2"
 description = "The redshift adapter plugin for dbt (data build tool)"
 category = "dev"
 optional = false
@@ -313,12 +313,12 @@ python-versions = ">=3.6.2"
 
 [package.dependencies]
 boto3 = ">=1.4.4,<2.0.0"
-dbt-core = "0.20.1"
-dbt-postgres = "0.20.1"
+dbt-core = "0.20.2"
+dbt-postgres = "0.20.2"
 
 [[package]]
 name = "dbt-snowflake"
-version = "0.20.1"
+version = "0.20.2"
 description = "The snowflake adapter plugin for dbt (data build tool)"
 category = "dev"
 optional = false
@@ -326,7 +326,7 @@ python-versions = ">=3.6.2"
 
 [package.dependencies]
 cryptography = ">=3.2,<4"
-dbt-core = "0.20.1"
+dbt-core = "0.20.2"
 requests = "<3.0.0"
 snowflake-connector-python = {version = ">=2.4.1,<2.5.0", extras = ["secure-local-storage"]}
 
@@ -1160,7 +1160,7 @@ secure-local-storage = ["keyring (!=16.1.0,<22.0.0)"]
 
 [[package]]
 name = "sqlfluff"
-version = "0.6.8"
+version = "0.6.9"
 description = "The SQL Linter for Humans"
 category = "dev"
 optional = false
@@ -1425,16 +1425,16 @@ cryptography = [
     {file = "cryptography-3.4.8.tar.gz", hash = "sha256:94cc5ed4ceaefcbe5bf38c8fba6a21fc1d365bb8fb826ea1688e3370b2e24a1c"},
 ]
 dbt = [
-    {file = "dbt-0.20.1-py3-none-any.whl", hash = "sha256:91c2a2ed5d6f8b247b09b216838b74d302f22667be86d474bdf3d4c272f31020"},
-    {file = "dbt-0.20.1.tar.gz", hash = "sha256:ed3421a6900bc0ed4157a9e2b3b74ccf3ff31eb766655440d1f68897dc3b8050"},
+    {file = "dbt-0.20.2-py3-none-any.whl", hash = "sha256:683941dee9e69733492cc876b77f23fe8611b2fe3bd1c91f1382e165dae42c22"},
+    {file = "dbt-0.20.2.tar.gz", hash = "sha256:b4496a51288b60c612801a5c0a6eeda61edb2d5a9b10b1573d5491ceb07cc6a4"},
 ]
 dbt-bigquery = [
-    {file = "dbt-bigquery-0.20.1.tar.gz", hash = "sha256:6557174f1784046a57e771938f474a94ec05297c00aa75521080532800dab248"},
-    {file = "dbt_bigquery-0.20.1-py3-none-any.whl", hash = "sha256:8ef809e69be1f2d72c953cdeb8a6b347fd6b070cbe58b805bed4e7d6f91a6cb4"},
+    {file = "dbt-bigquery-0.20.2.tar.gz", hash = "sha256:18690ae3f0d54bc3a86f83b6261c98918cb6d9d1932deb833cfccae4e85af7e9"},
+    {file = "dbt_bigquery-0.20.2-py3-none-any.whl", hash = "sha256:a07f3289b6b062c8168472c63f892f849b83c71698f8dd4e583aaa9c503c3567"},
 ]
 dbt-core = [
-    {file = "dbt-core-0.20.1.tar.gz", hash = "sha256:ae357cb3412519f9f5de0bee1bf2f9560e7c28ef6320f629634ea17c46f5aeaa"},
-    {file = "dbt_core-0.20.1-py3-none-any.whl", hash = "sha256:80b4d5d9f9093f6f1fedd955c098afbb874e09627a5bfad9ed11a38a4fa2936c"},
+    {file = "dbt-core-0.20.2.tar.gz", hash = "sha256:a6e2545d7a1fd4196c2872a50a3406ca1ec8be62c02180210a9e7d13d4616fbd"},
+    {file = "dbt_core-0.20.2-py3-none-any.whl", hash = "sha256:03891f8fd382fc3bbb0246989cba607a881e9248b89b957f436611573b0ab773"},
 ]
 dbt-extractor = [
     {file = "dbt_extractor-0.4.0-cp310-cp310-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:f776821a92b1419745ce4fe77d1f3bba46b9efccec3d2f8d0353f3bcb9b10150"},
@@ -1483,16 +1483,16 @@ dbt-extractor = [
     {file = "dbt_extractor-0.4.0.tar.gz", hash = "sha256:58672e36fab988c849a693405920ee18421f27245c48e5f9ecf496369ed31a85"},
 ]
 dbt-postgres = [
-    {file = "dbt-postgres-0.20.1.tar.gz", hash = "sha256:b8f6d4323f268f9d06b98fce67f02a23da50f77a5ad69d069cabd82bc1371889"},
-    {file = "dbt_postgres-0.20.1-py3-none-any.whl", hash = "sha256:2ef4b725236dfb3da295b582328ef449943c32dbbbcf0fa7f8ffd27b03f7dd0d"},
+    {file = "dbt-postgres-0.20.2.tar.gz", hash = "sha256:738909960d69c36a934ce31f3f4cc12d2812a75a5914272e3fe7ab73703105f0"},
+    {file = "dbt_postgres-0.20.2-py3-none-any.whl", hash = "sha256:e3b2bf397d95eae997de783a6d98564981f40cb81385124ed0c22d7050dc7a90"},
 ]
 dbt-redshift = [
-    {file = "dbt-redshift-0.20.1.tar.gz", hash = "sha256:c2ec9e79f74470dd956c4775e69a1fab71b7c8248bc74cfb1ad81aee53c3297c"},
-    {file = "dbt_redshift-0.20.1-py3-none-any.whl", hash = "sha256:dab679728d5c36a7514dbf49db2c593f21d77758d7e3ea87068e7414962f775e"},
+    {file = "dbt-redshift-0.20.2.tar.gz", hash = "sha256:7cd5cb7c0018b2df727d67e06ec84b0c2706490b9b2cb31beaa90379a5f04f73"},
+    {file = "dbt_redshift-0.20.2-py3-none-any.whl", hash = "sha256:e4c1e5cec8d62b73bb488a01f535b1e7fd778ed8324db1ae6bc2cce597ba7db7"},
 ]
 dbt-snowflake = [
-    {file = "dbt-snowflake-0.20.1.tar.gz", hash = "sha256:4d6f583533d25f7d85574eacb5bb9c3db4914d53b062a7b834f9024cf5a98ffd"},
-    {file = "dbt_snowflake-0.20.1-py3-none-any.whl", hash = "sha256:9b1cc8c70d234965c5cf9d10701b18ecf54f7fa84bb2e40ba318cf39e1046cd9"},
+    {file = "dbt-snowflake-0.20.2.tar.gz", hash = "sha256:59f6ce846e8c264533ab6b7d0b07e4ac9ae6e27a2bc1cef0f7179fc14584b2e6"},
+    {file = "dbt_snowflake-0.20.2-py3-none-any.whl", hash = "sha256:9431c0463e4580502e2966a3745d735047709e1e0d6b8ae5f02f3ca869fe43cb"},
 ]
 dbt-sqlite = [
     {file = "dbt-sqlite-0.2.1.tar.gz", hash = "sha256:26f09cd0079db487cc7e346c19ec6a1cc56a8ffc24e01c1a6310a504407e9c67"},
@@ -2083,8 +2083,8 @@ snowflake-connector-python = [
     {file = "snowflake_connector_python-2.4.6-cp39-cp39-win_amd64.whl", hash = "sha256:ac051f5a26f986371ad97e2e393edf06f9571b803e1f1e795b094d6c8b204715"},
 ]
 sqlfluff = [
-    {file = "sqlfluff-0.6.8-py3-none-any.whl", hash = "sha256:5775aba547b89e90755d4cc32a05d727c705220b8c4db2b33e35fce564f7b964"},
-    {file = "sqlfluff-0.6.8.tar.gz", hash = "sha256:1ecead216ed66e8ec8aaa305c3111b9b775278172474988e1fce05875a609eef"},
+    {file = "sqlfluff-0.6.9-py3-none-any.whl", hash = "sha256:570737a1d3f5571607ea78f18716d9a5e4f6e601108c3b8898fff646f0c9ef8f"},
+    {file = "sqlfluff-0.6.9.tar.gz", hash = "sha256:799f9d801f4cfb6b7214c1d6af9c5fcf79f8e3de778094d540afa488bc3e1fd1"},
 ]
 sqlparse = [
     {file = "sqlparse-0.3.1-py2.py3-none-any.whl", hash = "sha256:022fb9c87b524d1f7862b3037e541f68597a730a8843245c349fc93e1643dc4e"},

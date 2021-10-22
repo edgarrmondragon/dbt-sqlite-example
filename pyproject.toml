@@ -7,11 +7,11 @@ authors = ["Edgar Ramírez Mondragón <edgarrm358@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 kaggle = "^1.5.12"
-dbt-core = "^0.20.1"
+dbt-core = "^0.20.2"
 dbt-sqlite = "^0.2.1"
 
 [tool.poetry.dev-dependencies]
-sqlfluff = {extras = ["dbt"], version = "^0.6.8"}
+sqlfluff = {extras = ["dbt"], version = "^0.6.9"}
 
 [tool.sqlfluff.core]
 templater = "dbt"
