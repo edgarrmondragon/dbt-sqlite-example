@@ -332,7 +332,7 @@ snowflake-connector-python = {version = ">=2.4.1,<2.5.0", extras = ["secure-loca
 
 [[package]]
 name = "dbt-sqlite"
-version = "0.2.0"
+version = "0.2.1"
 description = "A SQLite adapter plugin for dbt (data build tool)"
 category = "main"
 optional = false
@@ -1281,7 +1281,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "6ef818cca2ab28d3a06d1e070a5f05c503ed9f57c55dab2a0533d40b0c647b9f"
+content-hash = "a3b6b9f3def921927fd63a861154b715d33a7d7f2ccb8f5ad22e06946004ec63"
 
 [metadata.files]
 agate = [
@@ -1495,8 +1495,8 @@ dbt-snowflake = [
     {file = "dbt_snowflake-0.20.2-py3-none-any.whl", hash = "sha256:9431c0463e4580502e2966a3745d735047709e1e0d6b8ae5f02f3ca869fe43cb"},
 ]
 dbt-sqlite = [
-    {file = "dbt-sqlite-0.2.0.tar.gz", hash = "sha256:16a4ca019d109191b9bb9e633f2b946f261cac15ef9ecd0741bab8eecf604a9f"},
-    {file = "dbt_sqlite-0.2.0-py3-none-any.whl", hash = "sha256:559ca53d7740d6a6d510c189d42c8d327622651b59fd01d557a6ce058cbff62f"},
+    {file = "dbt-sqlite-0.2.1.tar.gz", hash = "sha256:26f09cd0079db487cc7e346c19ec6a1cc56a8ffc24e01c1a6310a504407e9c67"},
+    {file = "dbt_sqlite-0.2.1-py3-none-any.whl", hash = "sha256:dacbdf294688f30aaa16c1481ecee743a83ba599761c63c248e0874e0de94a04"},
 ]
 diff-cover = [
     {file = "diff_cover-6.4.2-py3-none-any.whl", hash = "sha256:d2986e8b42556ed8c01792293b48720ec31451e91a7fa9cfc089d0d0e8bae84e"},
