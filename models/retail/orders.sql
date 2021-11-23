@@ -35,4 +35,4 @@ select
     strftime('%m', orders.order_date) - strftime('%m', customer_cohorts.cohort_month)
   ) as cohort_index
 from orders
-join customer_cohorts on orders.customer_id = customer_cohorts.customer_id
+inner join customer_cohorts on orders.customer_id = customer_cohorts.customer_id
