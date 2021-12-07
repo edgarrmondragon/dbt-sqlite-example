@@ -14,5 +14,5 @@ dbt_sqlite:
       schema: main
       schemas_and_paths:
         main: "{{ env_var('PWD') }}/dbs/etl.db"
-        dataset: "{{ env_var('PWD') }}/dbs/dataset.db"
+        retail: "{{ env_var('PWD') }}/dbs/retail.db"
       schema_directory: "{{ env_var('PWD') }}/dbs"

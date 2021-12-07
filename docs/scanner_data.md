@@ -10,6 +10,6 @@ Check the source [here](https://www.kaggle.com/marian447/retail-store-sales-tran
 
 ## Tables
 
-- [`scanner_data`](/#!/source/source.testing_sqlite.retail.scanner_data)
+- [`scanner_data`](#!/source/source.testing_sqlite.retail.scanner_data)
 
 {% enddocs %}

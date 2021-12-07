@@ -4,8 +4,11 @@ sources:
   - name: retail
     tags: [kaggle]
     loader: SQLite CLI
-    schema: dataset
+    schema: retail
     description: '{{ doc("scanner_data") }}'
+    meta:
+      contains_pii: false
+      owner: "@edgarrmondragon"
     tables:
       - name: scanner_data
         description: >
