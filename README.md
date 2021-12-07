@@ -1,6 +1,7 @@
 # dbt and SQLite
 
 [![Lint dbt models](https://github.com/edgarrmondragon/dbt-sqlite-example/actions/workflows/lint-models.yml/badge.svg?event=push)](https://github.com/edgarrmondragon/dbt-sqlite-example/actions/workflows/lint-models.yml)
+[![Test data](https://github.com/edgarrmondragon/dbt-sqlite-example/actions/workflows/test.yml/badge.svg)](https://github.com/edgarrmondragon/dbt-sqlite-example/actions/workflows/test.yml)
 
 Example [dbt] project with SQLite.
 
