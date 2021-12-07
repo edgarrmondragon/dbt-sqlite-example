@@ -15,7 +15,7 @@ raw_data/scanner_data.csv:
 
 dbs/retail.db: dbs/create_scanner_data.sql raw_data/scanner_data.csv
 	rm -f $@
-	cat dbs/create_scanner_data.sql | sqlite3 $@
+	sqlite3 $@ < dbs/create_scanner_data.sql
 	tail -n +2 raw_data/scanner_data.csv | sqlite3 $@ ".mode csv" ".import /dev/stdin scanner_data"
 
 .PHONY: run
