@@ -9,7 +9,7 @@ sources:
     tables:
       - name: scanner_data
         description: >
-          64.682 transactions of 5.242 SKU's sold to 22.625 customers during
+          64,682 transactions of 5,242 SKUs sold to 22,625 customers during
           one year.
         columns:
           - name: row_id
