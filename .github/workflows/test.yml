@@ -1,0 +1,39 @@
+name: Test data
+
+on: push
+
+jobs:
+  test:
+    name: Test data using dbt
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        python-version: ['3.8']
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Kaggle Credentials
+        env:
+          CREDENTIALS: ${{ secrets.KAGGLE_CREDENTIALS }}
+        run: |
+          echo "${CREDENTIALS}" > "${{ runner.temp }}/kaggle.json"
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+          architecture: x64
+
+      - name: Install Dependencies
+        run: |
+          pip install poetry==1.1.11
+          poetry install
+
+      - name: Test models
+        env:
+          DBT_PROFILES_DIR: "./"
+          KAGGLE_CONFIG_DIR: ${{ runner.temp }}
+        run: make test

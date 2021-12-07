@@ -13,22 +13,26 @@ raw_data/scanner_data.csv:
 	$(POETRY) run kaggle datasets download --force marian447/retail-store-sales-transactions
 	unzip -o retail-store-sales-transactions.zip -d raw_data
 
-dbs/dataset.db: dbs/create_scanner_data.sql raw_data/scanner_data.csv
+dbs/retail.db: dbs/create_scanner_data.sql raw_data/scanner_data.csv
 	rm -f $@
-	cat dbs/create_scanner_data.sql | sqlite3 $@
+	sqlite3 $@ < dbs/create_scanner_data.sql
 	tail -n +2 raw_data/scanner_data.csv | sqlite3 $@ ".mode csv" ".import /dev/stdin scanner_data"
 
 .PHONY: run
-run: dbs/dataset.db
+run: dbs/retail.db
 	$(POETRY) run dbt run
 
+.PHONY: test
+test: dbs/retail.db
+	$(POETRY) run dbt test
+
 compile: target/compiled/$(PROJECT)/$(COMPILE_STAMP)
-target/compiled/$(PROJECT)/$(COMPILE_STAMP): dbs/dataset.db
+target/compiled/$(PROJECT)/$(COMPILE_STAMP): dbs/retail.db
 	$(POETRY) run dbt compile
 	touch target/compiled/$(PROJECT)/$(COMPILE_STAMP)
 
-docs: dbs/dataset.db install target/index.html
-target/index.html: dbs/dataset.db
+docs: dbs/retail.db install target/index.html
+target/index.html: dbs/retail.db
 	$(POETRY) run dbt docs generate
 
 .PHONY: lineage

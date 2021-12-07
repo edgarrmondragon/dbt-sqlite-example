@@ -5,3 +5,22 @@ models:
     description: Fact table for orders including customer and cohort dimensions.
   - name: cohorts
     description: Cohort revenue analysis.
+    columns:
+      - name: cohort_month
+        description: Cohort Month
+      - name: index_0
+      - name: index_1
+      - name: index_2
+      - name: index_3
+      - name: index_4
+      - name: index_5
+      - name: index_6
+      - name: index_7
+      - name: index_8
+      - name: index_9
+      - name: index_10
+      - name: index_11
+      - name: index_12
+      - name: index_13
+      - name: index_14
+      - name: overall
