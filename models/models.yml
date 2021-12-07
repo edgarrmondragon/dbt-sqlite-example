@@ -3,6 +3,30 @@ version: 2
 models:
   - name: orders
     description: Fact table for orders including customer and cohort dimensions.
+    columns:
+      - name: transaction_id
+        description: Order/transaction ID
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: Customer ID
+        tests:
+          - not_null
+      - name: order_date
+        description: Date in which the order was processed
+      - name: items
+        description: Total number of items in the order
+      - name: unique_items
+        description: Total number of distinct items (SKUs) in the order
+      - name: amount
+        description: Total sale amount
+      - name: order_month
+        description: Month in which this order was processed
+      - name: cohort_month
+        description: Cohort month of the customer associated with this order
+      - name: cohort_index
+        description: Cohort index for this order's date
   - name: cohorts
     description: Cohort revenue analysis.
     columns:
