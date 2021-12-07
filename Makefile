@@ -22,6 +22,10 @@ dbs/dataset.db: dbs/create_scanner_data.sql raw_data/scanner_data.csv
 run: dbs/dataset.db
 	$(POETRY) run dbt run
 
+.PHONY: test
+test: dbs/dataset.db
+	$(POETRY) run dbt test
+
 compile: target/compiled/$(PROJECT)/$(COMPILE_STAMP)
 target/compiled/$(PROJECT)/$(COMPILE_STAMP): dbs/dataset.db
 	$(POETRY) run dbt compile

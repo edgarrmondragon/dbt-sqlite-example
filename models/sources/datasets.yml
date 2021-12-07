@@ -11,3 +11,37 @@ sources:
         description: >
           64.682 transactions of 5.242 SKU's sold to 22.625 customers during
           one year.
+        columns:
+          - name: row_id
+            description: Unique identifier of the record
+            tests:
+              - unique
+              - not_null
+          - name: date
+            description: Sales Date
+            tests:
+              - not_null
+          - name: customer_id
+            description: Customer ID
+            tests:
+              - not_null
+          - name: transaction_id
+            description: Transaction ID
+            tests:
+              - not_null
+          - name: sku_category
+            description: SKU category
+            tests:
+              - not_null
+          - name: sku
+            description: SKU ID
+            tests:
+              - not_null
+          - name: quantity
+            description: Quantity Sold
+            tests:
+              - not_null
+          - name: sales_amount
+            description: Sales Amount
+            tests:
+              - not_null
