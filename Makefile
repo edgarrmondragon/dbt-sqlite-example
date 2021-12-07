@@ -18,12 +18,11 @@ dbs/retail.db: dbs/create_scanner_data.sql raw_data/scanner_data.csv
 	sqlite3 $@ < dbs/create_scanner_data.sql
 	tail -n +2 raw_data/scanner_data.csv | sqlite3 $@ ".mode csv" ".import /dev/stdin scanner_data"
 
-.PHONY: run
-run: dbs/retail.db
+dbs/etl.db: dbs/retail.db
 	$(POETRY) run dbt run
 
 .PHONY: test
-test: dbs/retail.db
+test: dbs/retail.db dbs/etl.db
 	$(POETRY) run dbt test
 
 compile: target/compiled/$(PROJECT)/$(COMPILE_STAMP)
