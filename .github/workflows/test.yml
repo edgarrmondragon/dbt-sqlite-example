@@ -15,12 +15,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup Kaggle Credentials
-        env:
-          CREDENTIALS: ${{ secrets.KAGGLE_CREDENTIALS }}
-        run: |
-          echo "${CREDENTIALS}" > "${{ runner.temp }}/kaggle.json"
-
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -35,5 +29,6 @@ jobs:
       - name: Test models
         env:
           DBT_PROFILES_DIR: "./"
-          KAGGLE_CONFIG_DIR: ${{ runner.temp }}
+          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+          KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
         run: make test
