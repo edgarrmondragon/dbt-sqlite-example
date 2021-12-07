@@ -28,7 +28,6 @@ dbt_sqlite:
       schema: main
       schemas_and_paths:
         main: "{{ env_var('PWD') }}/dbs/etl.db"
-        retail: "{{ env_var('PWD') }}/dbs/retail.db"
       schema_directory: "{{ env_var('PWD') }}/dbs"
 ```
 
