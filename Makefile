@@ -30,8 +30,8 @@ target/compiled/$(PROJECT)/$(COMPILE_STAMP): dbs/retail.db
 	$(POETRY) run dbt compile
 	touch target/compiled/$(PROJECT)/$(COMPILE_STAMP)
 
-docs: dbs/retail.db install target/index.html
-target/index.html: dbs/retail.db
+docs: target/index.html
+target/index.html: dbs/retail.db dbs/etl.db
 	$(POETRY) run dbt docs generate
 
 .PHONY: lineage
