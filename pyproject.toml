@@ -16,7 +16,7 @@ sqlfluff-templater-dbt = "^0.8.2"
 
 [tool.sqlfluff.core]
 templater = "dbt"
-exclude_rules = "L005"
+exclude_rules = "L005" # Allow commas to have whitespace directly before them.
 
 [tool.sqlfluff.rules]
 tab_space_size = 2
