@@ -566,7 +566,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "sqlfluff"
-version = "0.11.0"
+version = "0.11.1"
 description = "The SQL Linter for Humans"
 category = "dev"
 optional = false
@@ -590,7 +590,7 @@ typing-extensions = "*"
 
 [[package]]
 name = "sqlfluff-templater-dbt"
-version = "0.11.0"
+version = "0.11.1"
 description = "Lint your dbt project SQL"
 category = "dev"
 optional = false
@@ -697,7 +697,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "90a6b4faa0e9cec24b686421bfb08ec027311d55969209869e0e3a6773c9d9b0"
+content-hash = "37890a53158476180f5ebdfe1638d82cc753d3c6b9ca1a6d5b465dc09452b3fb"
 
 [metadata.files]
 agate = [
@@ -1173,12 +1173,12 @@ six = [
     {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
 ]
 sqlfluff = [
-    {file = "sqlfluff-0.11.0-py3-none-any.whl", hash = "sha256:cbe73f505322e9dc74ac70559044540b311ccb031bed273a9caf7b59cfb91859"},
-    {file = "sqlfluff-0.11.0.tar.gz", hash = "sha256:b1120713e412c7914207419503156d7a742d542ecde05256cb78a1138697966a"},
+    {file = "sqlfluff-0.11.1-py3-none-any.whl", hash = "sha256:405a12edd8a93a31e19f092a4d3c8733537e0d53896ec8fd59adaf8b3f95c9e7"},
+    {file = "sqlfluff-0.11.1.tar.gz", hash = "sha256:707507debcd6b0a504371d53e1f4ce16d020b462824f60004364fc0bcae9fc23"},
 ]
 sqlfluff-templater-dbt = [
-    {file = "sqlfluff-templater-dbt-0.11.0.tar.gz", hash = "sha256:87c605ddef9afc1adbb2ee526283d44dd154e1da51f6a78cbd7e29cc43a24561"},
-    {file = "sqlfluff_templater_dbt-0.11.0-py3-none-any.whl", hash = "sha256:9b07d712e1023e8012264fdc3d0c6abc52115306f8fc12b666a6f7d3caa60203"},
+    {file = "sqlfluff-templater-dbt-0.11.1.tar.gz", hash = "sha256:353322b5370020687c9e470aea2e5df1ef241274fcd01484f83bcc872e05a1d0"},
+    {file = "sqlfluff_templater_dbt-0.11.1-py3-none-any.whl", hash = "sha256:53d1e4f43e971bcf055f166fec70508f383b1eba8e68fd151d2de5ada9e7ff94"},
 ]
 sqlparse = [
     {file = "sqlparse-0.3.1-py2.py3-none-any.whl", hash = "sha256:022fb9c87b524d1f7862b3037e541f68597a730a8843245c349fc93e1643dc4e"},
