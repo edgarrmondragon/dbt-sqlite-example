@@ -7,7 +7,7 @@ authors = ["Edgar Ramírez Mondragón <edgarrm358@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 kaggle = "^1.5.12"
-dbt-core = "^1.0.4"
+dbt-core = "1.0.5rc2"
 dbt-sqlite = "^1.0.0"
 
 [tool.poetry.dev-dependencies]
