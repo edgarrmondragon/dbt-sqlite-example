@@ -589,7 +589,7 @@ typing-extensions = "*"
 
 [[package]]
 name = "sqlfluff-templater-dbt"
-version = "0.13.2"
+version = "1.0.0"
 description = "Lint your dbt project SQL"
 category = "dev"
 optional = false
@@ -693,7 +693,7 @@ watchdog = ["watchdog"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "882a20bc64e9f698b866d1d75a0ed974e66a156d2b8c9a8c6d2f85018072a81a"
+content-hash = "901a00d6252b2bf82e2c802058ac31cc6c50eab67628f0eead70d5aa8a94cdd9"
 
 [metadata.files]
 agate = [
@@ -1184,8 +1184,8 @@ sqlfluff = [
     {file = "sqlfluff-0.13.2.tar.gz", hash = "sha256:c386fbbdfb8ea6a7815ebe66d11f264777e3112d24bb3233b356ef174218b77d"},
 ]
 sqlfluff-templater-dbt = [
-    {file = "sqlfluff-templater-dbt-0.13.2.tar.gz", hash = "sha256:1fd21f1588f4e5717a0d498a8001265e45ae1362d68d9170e0f526e6d6dff0e8"},
-    {file = "sqlfluff_templater_dbt-0.13.2-py3-none-any.whl", hash = "sha256:21d276a4dd87b549ca8536c064ad22515c829dd4769ae6989dad914f4a4b0597"},
+    {file = "sqlfluff-templater-dbt-1.0.0.tar.gz", hash = "sha256:3a1b9718ddede67d438d7862c72649d17743a05ae330842ba1ab807159f216ba"},
+    {file = "sqlfluff_templater_dbt-1.0.0-py3-none-any.whl", hash = "sha256:71abc6e014d3efa411585ad30290c6dda144211b735ed18432f1217f7d5ecbd2"},
 ]
 sqlparse = [
     {file = "sqlparse-0.4.2-py3-none-any.whl", hash = "sha256:48719e356bb8b42991bdbb1e8b83223757b93789c00910a616a071910ca4a64d"},
