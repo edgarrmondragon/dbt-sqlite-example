@@ -156,7 +156,7 @@ python-versions = ">=3.6.1"
 
 [[package]]
 name = "dbt-sqlite"
-version = "1.1.0"
+version = "1.1.1"
 description = "A SQLite adapter plugin for dbt (data build tool)"
 category = "main"
 optional = false
@@ -693,7 +693,7 @@ watchdog = ["watchdog"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "71473b90bba95e0f4296021130f9d3693401273a22f0405217e9e6d67007a2a4"
+content-hash = "24d86fc74740a1d30a3227001c8c50643bd7b192593c98873fcbb395fca6cb12"
 
 [metadata.files]
 agate = [
@@ -824,8 +824,8 @@ dbt-extractor = [
     {file = "dbt_extractor-0.4.1.tar.gz", hash = "sha256:75b1c665699ec0f1ffce1ba3d776f7dfce802156f22e70a7b9c8f0b4d7e80f42"},
 ]
 dbt-sqlite = [
-    {file = "dbt-sqlite-1.1.0.tar.gz", hash = "sha256:364b6bd26416610ec51a5d4007f0411d90aed1865e03f33ba1a64c0cb13e36d2"},
-    {file = "dbt_sqlite-1.1.0-py3-none-any.whl", hash = "sha256:2f58f2d664773fb2ffe73e282f8b19a144a85ef16ca7f70789217f46fb1c7846"},
+    {file = "dbt-sqlite-1.1.1.tar.gz", hash = "sha256:3716f91389cb68a2dce23b15cba895a564c2c8b0665b12b08549b59873cf869f"},
+    {file = "dbt_sqlite-1.1.1-py3-none-any.whl", hash = "sha256:83fc7da1b22e57ac581845ff151a38605cf4b81459fe738bcf14d9715ac8ca0d"},
 ]
 diff-cover = [
     {file = "diff_cover-6.5.1-py3-none-any.whl", hash = "sha256:ad602868ff14969563216866fc249f068df54892bd6c989201110bbb837dab06"},
