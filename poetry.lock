@@ -111,7 +111,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
 name = "dbt-core"
-version = "1.3.1"
+version = "1.3.2"
 description = "With dbt, data analysts and engineers can build analytics the way engineers build applications."
 category = "main"
 optional = false
@@ -705,7 +705,7 @@ watchdog = ["watchdog"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "bdbdfbd1e0303eb83d90fd0d4a78cd242a438b5bfbd173d25f12b6a732e36d32"
+content-hash = "eb70f47935f3eb500a41f5cc6b8d3571ceb03c8cbc489f7d87975840d60251b3"
 
 [metadata.files]
 agate = [
@@ -811,8 +811,8 @@ colorama = [
     {file = "colorama-0.4.5.tar.gz", hash = "sha256:e6c6b4334fc50988a639d9b98aa429a0b57da6e17b9a44f0451f930b6967b7a4"},
 ]
 dbt-core = [
-    {file = "dbt-core-1.3.1.tar.gz", hash = "sha256:5b46c1dd21dde6ed160a14b781f7c34e07ca0de321fe317d682c84f62cdcb802"},
-    {file = "dbt_core-1.3.1-py3-none-any.whl", hash = "sha256:733ab7ba1f5dde664c3a3c2340aba755cd71db7967901870fff1caec68e69c1a"},
+    {file = "dbt-core-1.3.2.tar.gz", hash = "sha256:029168f6f92350e2bc534eca59bc9d9e2cfc5a974046240a8549a50c8de81388"},
+    {file = "dbt_core-1.3.2-py3-none-any.whl", hash = "sha256:22caa8a68732b3fdf7d10fc94bce22ab01fb08bbb5b522a60c960cdf88a26b6a"},
 ]
 dbt-extractor = [
     {file = "dbt_extractor-0.4.1-cp36-abi3-macosx_10_7_x86_64.whl", hash = "sha256:4dc715bd740e418d8dc1dd418fea508e79208a24cf5ab110b0092a3cbe96bf71"},
