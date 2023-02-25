@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        python-version: ['3.8']
+        python-version: ['3.10']
 
     steps:
       - name: Checkout code
@@ -22,8 +22,10 @@ jobs:
           architecture: x64
 
       - name: Install Dependencies
+        env:
+          PIP_CONSTRAINT: .github/workflows/constraints.txt
         run: |
-          pip install poetry==1.1.11
+          pipx install poetry
           poetry install
 
       - name: Test models
