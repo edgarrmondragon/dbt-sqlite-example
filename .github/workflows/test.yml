@@ -2,6 +2,9 @@ name: Test
 
 on: push
 
+env:
+  PIP_CONSTRAINT: .github/workflows/constraints.txt
+
 jobs:
   test:
     name: Test data using dbt
@@ -9,7 +12,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        python-version: ['3.8']
+        python-version: ['3.10']
 
     steps:
       - name: Checkout code
@@ -21,9 +24,13 @@ jobs:
           python-version: ${{ matrix.python-version }}
           architecture: x64
 
-      - name: Install Dependencies
+      - name: Install Poetry
         run: |
-          pip install poetry==1.1.11
+          pipx install poetry
+          poetry --version
+
+      - name: Install project dependencies
+        run: |
           poetry install
 
       - name: Test models
@@ -39,7 +46,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        python-version: ['3.8']
+        python-version: ['3.10']
 
     steps:
       - name: Checkout code
@@ -51,9 +58,13 @@ jobs:
           python-version: ${{ matrix.python-version }}
           architecture: x64
 
-      - name: Install Dependencies
+      - name: Install Poetry
         run: |
-          pip install poetry==1.1.11
+          pipx install poetry
+          poetry --version
+
+      - name: Install project dependencies
+        run: |
           poetry install
 
       - name: Lint models
