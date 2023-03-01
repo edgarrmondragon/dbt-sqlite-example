@@ -1,6 +1,9 @@
-name: Test data
+name: Test
 
 on: push
+
+env:
+  PIP_CONSTRAINT: .github/workflows/constraints.txt
 
 jobs:
   test:
@@ -9,7 +12,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        python-version: ['3.8']
+        python-version: ['3.10']
 
     steps:
       - name: Checkout code
@@ -21,9 +24,13 @@ jobs:
           python-version: ${{ matrix.python-version }}
           architecture: x64
 
-      - name: Install Dependencies
+      - name: Install Poetry
         run: |
-          pip install poetry==1.1.11
+          pipx install poetry
+          poetry --version
+
+      - name: Install project dependencies
+        run: |
           poetry install
 
       - name: Test models
@@ -32,3 +39,35 @@ jobs:
           KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
           KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
         run: make test
+
+  lint_dbt:
+    name: Lint SQL models using SQLFluff
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        python-version: ['3.10']
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+          architecture: x64
+
+      - name: Install Poetry
+        run: |
+          pipx install poetry
+          poetry --version
+
+      - name: Install project dependencies
+        run: |
+          poetry install
+
+      - name: Lint models
+        env:
+          DBT_PROFILES_DIR: "./"
+        run: make lint
