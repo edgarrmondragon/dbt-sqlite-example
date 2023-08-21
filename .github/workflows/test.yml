@@ -28,6 +28,7 @@ jobs:
 
       - name: Install project dependencies
         run: |
+          poetry env use python3.11
           poetry install
 
       - name: Test models
@@ -59,6 +60,7 @@ jobs:
 
       - name: Install project dependencies
         run: |
+          poetry env use python3.11
           poetry install
 
       - name: Lint models
