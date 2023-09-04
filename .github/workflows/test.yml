@@ -2,17 +2,12 @@ name: Test
 
 on: push
 
-env:
-  PIP_CONSTRAINT: .github/workflows/constraints.txt
-
 jobs:
   test:
     name: Test data using dbt
     runs-on: ubuntu-latest
     strategy:
       fail-fast: true
-      matrix:
-        python-version: ['3.10']
 
     steps:
       - name: Checkout code
@@ -21,10 +16,11 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: ${{ matrix.python-version }}
           architecture: x64
 
       - name: Install Poetry
+        env:
+          PIP_CONSTRAINT: .github/workflows/constraints.txt
         run: |
           pipx install poetry
           poetry --version
@@ -45,8 +41,6 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: true
-      matrix:
-        python-version: ['3.10']
 
     steps:
       - name: Checkout code
@@ -59,6 +53,8 @@ jobs:
           architecture: x64
 
       - name: Install Poetry
+        env:
+          PIP_CONSTRAINT: .github/workflows/constraints.txt
         run: |
           pipx install poetry
           poetry --version
