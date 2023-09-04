@@ -2,9 +2,6 @@ name: Test
 
 on: push
 
-env:
-  PIP_CONSTRAINT: .github/workflows/constraints.txt
-
 jobs:
   test:
     name: Test data using dbt
@@ -14,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -22,6 +19,8 @@ jobs:
           architecture: x64
 
       - name: Install Poetry
+        env:
+          PIP_CONSTRAINT: .github/workflows/constraints.txt
         run: |
           pipx install poetry
           poetry --version
@@ -46,7 +45,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -54,6 +53,8 @@ jobs:
           architecture: x64
 
       - name: Install Poetry
+        env:
+          PIP_CONSTRAINT: .github/workflows/constraints.txt
         run: |
           pipx install poetry
           poetry --version
