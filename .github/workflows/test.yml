@@ -2,9 +2,6 @@ name: Test
 
 on: push
 
-env:
-  PIP_CONSTRAINT: .github/workflows/constraints.txt
-
 jobs:
   test:
     name: Test data using dbt
@@ -22,6 +19,8 @@ jobs:
           architecture: x64
 
       - name: Install Poetry
+        env:
+          PIP_CONSTRAINT: .github/workflows/constraints.txt
         run: |
           pipx install poetry
           poetry --version
@@ -54,6 +53,8 @@ jobs:
           architecture: x64
 
       - name: Install Poetry
+        env:
+          PIP_CONSTRAINT: .github/workflows/constraints.txt
         run: |
           pipx install poetry
           poetry --version
